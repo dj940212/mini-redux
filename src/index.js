@@ -6,9 +6,10 @@ import App from './App';
 import { createStore, applyMiddleware } from './mini-redux/mini-redux'
 import { Provider } from './mini-redux/mini-react-redux'
 import { counter } from './index.redux'
-import thunk from 'redux-thunk'
+import thunk from './mini-redux/mini-redux-thunk'
+import arrThunk from './mini-redux/mini-redux-arrThunk'
 
-const store = createStore(counter, applyMiddleware(thunk))
+const store = createStore(counter, applyMiddleware(thunk, arrThunk))
 
 function listener(){
     const current = store.getState()
