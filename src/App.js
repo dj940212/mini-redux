@@ -16,15 +16,14 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Mini Redux</h1>
-                    <p>从零开始, 实现了redux,react-redux,react-thunk中间件等基础功能</p>
                 </header>
                 <p className="num">now num is {this.props.num}</p>
                 <button onClick={this.props.add}>Add</button>
                 <button onClick={this.props.remove}>Remove</button>
                 <button onClick={this.props.addAsync}>AddAsync</button>
                 <button onClick={this.props.addTwice}>addTwice</button>
-
             </div>
         );
     }
